@@ -1,0 +1,58 @@
+<!--
+  Desarrollador: Medrano Salazar Jonathan Govinda
+  Twitter. @arithgrey
+  mail: arithgrey@gmail.com
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <META HTTP-EQUIV="REFRESH" CONTENT="1;URL=http://127.0.0.1/redimen.html"> <!--Dirección de la página actual -->
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script> <!-- Jquery -->
+
+
+  <!--Apariencia general de la página -->
+  <script type="text/javascript">
+
+    $(document).on("ready", function(){
+        $('#enDiv').css('background' ,'cyan');
+        $('#enDiv').css('color', 'white');
+        $('#enDiv').css('width', '1024px');
+        $('#enDiv').css('height', '500px');
+        $('#enDiv').css('margin', '0 auto');  
+
+    });
+  </script>
+
+
+</head>
+<body onload="redimenciona()"> <!--Mandamos llamar la función redimenciona-->
+  
+  <!--  Función que dimensionará el div color azul de forma proporcional  -->
+<script>
+
+        function redimenciona(){
+          
+          var widthAc=$(window).width();
+          var Miheight=$(window).height();
+          
+          var redim=widthAc*.9;
+          var redimHH=Miheight*.9;
+
+          $('#enDiv').css('width', redim+'px');
+          $('#enDiv').css('height',redimHH+'px');      
+          
+       }
+
+        </script>
+
+  <div id="enDiv">
+
+    <h1>Cambia el tamaño del navegador  para redimencionar el div azul proporcionalmente </h1>
+
+  </div>
+  
+</body>
+</html>
